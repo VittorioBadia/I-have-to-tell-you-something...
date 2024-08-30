@@ -1,4 +1,4 @@
-const SERVER_URL = 'http://localhost:3000';  // Add this at the top of your script
+const SERVER_URL = 'http://localhost:3001';  // Add this at the top of your script
 
 document.addEventListener('DOMContentLoaded', () => {
     const writeButton = document.getElementById('write-button');
