@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I have to tell you something...</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/bem0vxv.css" />
+  </head>
+  <body class="main-page">
+    <header class="header-visible">
+      <h1>I have to tell you something...</h1>
+      <h4>by Vittorio Badia</h4>
+    </header>
+
+    <div class="message-box" id="message-form">
+      <button id="write-button">Write Your Message</button>
+    </div>
+
+    <div id="message-input" style="display: none">
+      <textarea
+        id="message-text"
+        placeholder="Write your message here..."
+      ></textarea>
+      <button id="continue-button">Continue</button>
+    </div>
+
+    <div id="story-sequence" style="display: none">
+      <div id="story-page">"So I was thinking this..."</div>
+      <button id="next-button">Next</button>
+    </div>
+
+    <div id="final-message" style="display: none">
+      <div id="message-display"></div>
+      <button id="generate-link">Generate Link</button>
+    </div>
+
+    <div id="link-display" style="display: none">
+      <p>Your unique link:</p>
+      <a id="unique-link" href="#" target="_blank"></a>
+      <button id="copy-link">Copy Link</button>
+    </div>
+
+    <!-- Images specific to pages -->
+    <img
+      id="typewriter-image"
+      src="typewriter.png"
+      alt="Typewriter Image"
+      style="display: none"
+    />
+    <img id="ear-image" src="ear.png" alt="Ear Image" style="display: none" />
+    <img
+      id="secret-image"
+      src="secret.png"
+      alt="Secret Image"
+      style="display: none"
+    />
+    <img
+      id="rizz-image"
+      src="rizz.png"
+      alt="Rizz Image"
+      style="display: none"
+    />
+    <img
+      id="pray-image"
+      src="pray.webp"
+      alt="Pray Image"
+      style="display: none"
+    />
+    <img
+      id="come-image"
+      src="come.png"
+      alt="Come Image"
+      style="display: none"
+    />
+    <img
+      id="eyes-image"
+      src="eyes.webp"
+      alt="Eyes Image"
+      style="display: none"
+    />
+    <img
+      id="rose-image"
+      src="/public/rose.png"
+      alt="Rose Image"
+      style="display: none"
+    />
+
+    <script src="/public/scipt.js"></script>
+  </body>
+</html>

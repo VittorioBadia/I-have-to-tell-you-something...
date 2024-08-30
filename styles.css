@@ -1,0 +1,219 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(250, 235, 215, 0.438);
+    font-family: "new-kansas", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    /* Add a default class for the body to hide header elements */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Main page styles */
+.main-page h1 {
+    display: block;
+    position: absolute;
+    left: 10px;
+}
+
+.main-page h4 {
+    display: block;
+}
+
+h1,
+h4 {
+    display: none; /* Hide by default */
+}
+
+textarea {
+    width: 300px;
+    height: 100px;
+    margin-bottom: 20px;
+    position: relative;
+    top: 140px;
+}
+
+button {
+    padding: 20px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px; /* Makes the button rounded */
+    background-color: rgba(250, 235, 215, 0.438); /* Same background as the page */
+    color: black; /* Black text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Black shadow */
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+    align-items: center;
+    position: absolute;
+    top: 320px;
+    left: 105px;
+    font-family: "new-kansas", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+button:hover {
+    background-color: brown; /* Brown background on hover */
+    color: white; /* Optional: change text color on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Darker shadow on hover */
+}
+
+#story-sequence {
+    margin-top: 20px;
+}
+
+#final-message {
+    margin-top: 200px;
+}
+
+#link-display {
+    position: absolute;
+    top: 35px;
+}
+
+#story-page {
+    position: absolute;
+    font-size: 30px;
+    top: 20px;
+    left: 40px;
+}
+
+h1 {
+    position: absolute;
+    top: 140px;
+    color: rgb(57, 33, 2);
+}
+
+h4 {
+    position: absolute;
+    top: 600px;
+    left: 140px;
+    font-size: 13px;
+}
+
+
+
+.page-1 {
+    position: absolute;
+    margin-top: 45%; /* Example position */
+    margin-left: -24%; /* Center horizontally */
+}
+
+.page-2 {
+    position: absolute;
+    margin-top: 125%;
+    left: 40%;
+}
+
+.page-3 {
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 50%;
+}
+
+.final-page {
+    /* Styles for the final page */
+    top: 400px; /* Adjust position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    color: #2c3e50; /* Example: Darker text color */
+    font-size: 36px; /* Larger text for emphasis */
+    font-weight: bold; /* Emphasize text */
+    padding: 20px; /* Extra padding */
+    border: 2px solid #34495e; /* Example border */
+    background-color: #ecf0f1; /* Example background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* Specific styles for page 1 */
+#ear-image {
+    display: block;
+    margin-top: 40px;
+    margin-left: 70%;
+    width: 80px;
+    height: auto;
+}
+
+#secret-image {
+    display: block;
+    margin-top: 300px;
+    margin-right: 40%;
+    width: 80px;
+    height: auto;
+}
+
+/* Specific styles for page 2 */
+#rizz-image {
+    display: block; /* Show the image on page 2 */
+    margin-top: 60px;
+    margin-right: 40%;
+    width: 80px;
+    height: auto;
+}
+
+#pray-image {
+    display: block; /* Show the image on page 2 */
+    margin-top: 50%;
+    margin-left: 40%;
+    width: 80px;
+    height: auto;
+}
+
+#typewriter-image {
+    display: block; /* Show the image on page 2 */
+    margin-top: 50%;
+    margin-left:45%;
+    width: 60px;
+    height: auto;
+}
+
+#come-image {
+    display: block;
+    position: absolute;
+    bottom: 75%; /* Position from the bottom */
+    margin-right: 70%;  /* Position from the right */
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+    /* Add additional styles here */
+}
+
+#eyes-image {
+    display: block;
+    position: absolute;
+    top: 70%; /* Position from the top */
+    left: 50%; /* Position from the left */
+    width: 120px; /* Adjust size as needed */
+    height: auto;
+    /* Add additional styles here */
+}
+
+#rose-image {
+    display: block;
+    position: absolute;
+    bottom: 10%; /* Adjust position as needed */
+    right: 60%; /* Adjust position as needed */
+    width: 200px; /* Adjust size as needed */
+    height: auto;
+    /* Add additional styles here */
+}
+
+#generate-link {
+    position: absolute;
+    left: 115px;
+}
+
+.shared-view {
+    background-color: rgba(180, 117, 35, 0.438);
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+{
+  "name": "i-have-to-tell-you-something...",
+  "version": "1.0.0",
+  "description": "A website for sending personalized messages with a sharing feature",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mongodb": "^6.8.0",
+    "uuid": "^10.0.0"
+  },
+  "keywords": [
+    "message",
+    "sharing",
+    "personalized"
+  ],
+  "author": "",
+  "license": "ISC"
+}
