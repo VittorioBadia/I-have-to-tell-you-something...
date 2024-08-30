@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     padding: 20px;
-    background-color: rgba(250, 235, 215, 0.438);
+    background-color: rgba(255, 255, 255, 0.438);
     font-family: "new-kansas", sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -212,5 +212,5 @@ h4 {
 
 #copy-link {
     position: absolute;
-    top: 420px;
+    top: 470px;
 }

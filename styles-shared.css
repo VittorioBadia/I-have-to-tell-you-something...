@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     padding: 20px;
-    background-color: rgba(250, 235, 215, 0.438);
+    background-color: rgba(12, 192, 96, 0.438);
     font-family: "new-kansas", sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -207,10 +207,15 @@ h4 {
 }
 
 .shared-view {
-    background-color: rgba(180, 117, 35, 0.438);
+    background-color: rgba(250, 235, 215, 0.438);
 }
 
 #copy-link {
     position: absolute;
     top: 420px;
+}
+
+#new-message-link {
+    position: absolute;
+    top: 370px;
 }

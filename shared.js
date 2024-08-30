@@ -17,18 +17,28 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     let pageIndex = 0;
-    let message = 'This is a demo message.'; // In a real app, you'd fetch this from a server
+    
+    // Fetch the message from URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    let message = urlParams.get('message');
+    
+    // Decode the message (since it was encoded when the link was generated)
+    if (message) {
+        message = decodeURIComponent(message);
+    } else {
+        message = "No message found."; // Fallback if no message is in the URL
+    }
 
     const pages = [
         '"I have to tell you something..."',
-        '"So I was thinking this..."',
+        '"It is really really important."',
         '"Come closer..."',
         `"${message}"`
     ];
 
     function showPage(index) {
         storyPage.innerText = pages[index];
-        storyPage.className = `page-${index + 1}`;
+        storyPage.className = `message-box page-${index + 1}`;
 
         Object.values(images).forEach(img => img.style.display = 'none');
 
@@ -46,9 +56,15 @@ document.addEventListener('DOMContentLoaded', () => {
             finalMessage.style.display = 'block';
             storySequence.style.display = 'none';
             newMessageLink.style.display = 'block';
+            messageDisplay.textContent = message; // Display the message in the final screen
         }
 
         nextButton.style.display = index < pages.length - 1 ? 'block' : 'none';
+
+        // Reset animation
+        void storyPage.offsetWidth;
+        storyPage.style.animation = 'none';
+        storyPage.style.animation = null;
     }
 
     nextButton.addEventListener('click', () => {
@@ -58,8 +74,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // In a real application, you would fetch the message from a server here
-    // For now, we'll just use the demo message
-    messageDisplay.textContent = message;
     showPage(0);
 });

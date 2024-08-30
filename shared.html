@@ -4,50 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>I have to tell you something...</title>
-    <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://use.typekit.net/bem0vxv.css" />
+    <link rel="stylesheet" href="styles-shared.css" />
   </head>
-  <body class="main-page">
-    <header class="header-visible">
-      <h1>I have to tell you something...</h1>
-      <h4>by Vittorio Badia</h4>
-    </header>
-
-    <div class="message-box" id="message-form">
-      <button id="write-button">Write Your Message</button>
-    </div>
-
-    <div id="message-input" style="display: none">
-      <textarea
-        id="message-text"
-        placeholder="Write your message here..."
-      ></textarea>
-      <button id="continue-button">Continue</button>
-    </div>
-
-    <div id="story-sequence" style="display: none">
+  <body class="shared-view">
+    <div id="story-sequence">
       <div id="story-page"></div>
       <button id="next-button">Next</button>
     </div>
-
     <div id="final-message" style="display: none">
       <div id="message-display"></div>
-      <button id="generate-link">Generate Link</button>
     </div>
+    <a href="index.html" id="new-message-link" style="display: none"
+      >Create your own message</a
+    >
 
-    <div id="link-display" style="display: none">
-      <p>Share the message with who you want!:</p>
-      <input type="text" id="unique-link" readonly />
-      <button id="copy-link">Copy Link</button>
-    </div>
-
-    <!-- Images -->
-    <img
-      id="typewriter-image"
-      src="images/typewriter.png"
-      alt="Typewriter Image"
-      style="display: none"
-    />
+    <!-- Keep all your image elements -->
     <img
       id="ear-image"
       src="images/ear.png"
@@ -91,6 +63,6 @@
       style="display: none"
     />
 
-    <script src="script.js"></script>
+    <script src="shared.js"></script>
   </body>
 </html>
