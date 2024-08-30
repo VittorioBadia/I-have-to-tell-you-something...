@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(250, 235, 215, 0.438);
+    font-family: "new-kansas", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    /* Add a default class for the body to hide header elements */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.steps {
+    position: absolute;
+    top: 350px;
+    left: 45px;
+}
+
+.end {
+    position: absolute;
+    top: 500px;
+    left: 95px;
+    font-size: 10px;
+}
+
+img {
+    position: absolute;
+    height: 20px;
+    top: 590px;
+    left: 175px;
+}

@@ -214,3 +214,14 @@ h4 {
     position: absolute;
     top: 420px;
 }
+
+.title {
+    position: absolute;
+    top: 140px;
+    color: rgb(57, 33, 2);
+}
+
+ul {
+    position: absolute;
+    top: 200px;
+}

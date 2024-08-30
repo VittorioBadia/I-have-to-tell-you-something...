@@ -98,6 +98,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         nextButton.style.display = index < pages.length - 1 ? 'block' : 'none';
     }
+
+    const authorName = document.querySelector('h4');
+    if (authorName) {
+        authorName.style.cursor = 'pointer';
+        authorName.addEventListener('click', () => {
+            window.location.href = 'info.html';
+        });
+    }
 });
 
 
