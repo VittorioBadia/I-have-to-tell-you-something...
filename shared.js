@@ -4,7 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextButton = document.getElementById('next-button');
     const finalMessage = document.getElementById('final-message');
     const messageDisplay = document.getElementById('message-display');
-    const newMessageLink = document.getElementById('new-message-link');
+    // Remove this line
+    // const newMessageLink = document.getElementById('new-message-link');
 
     const images = {
         ear: document.getElementById('ear-image'),
@@ -55,7 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
             images.rose.style.display = 'block';
             finalMessage.style.display = 'block';
             storySequence.style.display = 'none';
-            newMessageLink.style.display = 'block';
+            // Remove this line
+            // newMessageLink.style.display = 'block';
             messageDisplay.textContent = message; // Display the message in the final screen
         }
 

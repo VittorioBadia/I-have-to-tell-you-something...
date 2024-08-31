@@ -23,8 +23,10 @@ const messages = {};
 app.get('/', (req, res) => {
     const id = req.query.id;
     if (id && messages[id]) {
+        // If there's an ID in the query and a corresponding message, serve the shared page
         res.sendFile(path.join(__dirname, 'public', 'shared.html'));
     } else {
+        // Otherwise, serve the main page
         res.sendFile(path.join(__dirname, 'index.html'));
     }
 });

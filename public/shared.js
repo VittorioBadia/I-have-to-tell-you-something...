@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextButton = document.getElementById('next-button');
     const finalMessage = document.getElementById('final-message');
     const messageDisplay = document.getElementById('message-display');
-    const newMessageLink = document.getElementById('new-message-link');
+    const mainTitle = document.getElementById('main-title');
 
     const images = {
         ear: document.getElementById('ear-image'),
@@ -17,17 +17,23 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     let pageIndex = 0;
-    let message = 'This is a demo message.'; // In a real app, you'd fetch this from a server
+    let message = ''; // We'll get this from localStorage
 
     const pages = [
         '"I have to tell you something..."',
         '"So I was thinking this..."',
         '"Come closer..."',
-        `"${message}"`
+        '' // This will be replaced with the actual message
     ];
 
     function showPage(index) {
-        storyPage.innerText = pages[index];
+        if (index > 0) {
+            mainTitle.style.display = 'none';
+        } else {
+            mainTitle.style.display = 'block';
+        }
+
+        storyPage.innerText = index === pages.length - 1 ? `"${message}"` : pages[index];
         storyPage.className = `page-${index + 1}`;
 
         Object.values(images).forEach(img => img.style.display = 'none');
@@ -45,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             images.rose.style.display = 'block';
             finalMessage.style.display = 'block';
             storySequence.style.display = 'none';
-            newMessageLink.style.display = 'block';
+            messageDisplay.textContent = message;
         }
 
         nextButton.style.display = index < pages.length - 1 ? 'block' : 'none';
@@ -58,8 +64,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // In a real application, you would fetch the message from a server here
-    // For now, we'll just use the demo message
-    messageDisplay.textContent = message;
-    showPage(0);
+    // Get the message ID from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get('id');
+    
+    if (id) {
+        message = localStorage.getItem(id);
+        if (message) {
+            showPage(0);
+        } else {
+            storySequence.style.display = 'none';
+            finalMessage.style.display = 'block';
+            messageDisplay.textContent = 'No message found.';
+            mainTitle.style.display = 'none';
+        }
+    } else {
+        storySequence.style.display = 'none';
+        finalMessage.style.display = 'block';
+        messageDisplay.textContent = 'No message found.';
+        mainTitle.style.display = 'none';
+    }
 });
