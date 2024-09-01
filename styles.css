@@ -129,76 +129,71 @@ h4 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
 }
 
-/* Specific styles for page 1 */
+
+
 #ear-image {
     display: block;
-    margin-top: 40px;
-    margin-left: 70%;
+    margin-top: 250px;
+    margin-right: 50%;
     width: 80px;
     height: auto;
 }
 
 #secret-image {
     display: block;
-    margin-top: 300px;
-    margin-right: 40%;
-    width: 80px;
-    height: auto;
-}
-
-/* Specific styles for page 2 */
-#rizz-image {
-    display: block; /* Show the image on page 2 */
-    margin-top: 60px;
-    margin-right: 40%;
+    margin-top: 50px;
+    margin-right: 50%;
     width: 80px;
     height: auto;
 }
 
 #pray-image {
-    display: block; /* Show the image on page 2 */
-    margin-top: 50%;
-    margin-left: 40%;
+    position: absolute;
+    margin-top: 50px;
+    margin-right: 50%;
     width: 80px;
     height: auto;
 }
 
-#typewriter-image {
-    display: block; /* Show the image on page 2 */
-    margin-top: 50%;
-    margin-left:45%;
-    width: 60px;
+#rizz-image {
+    display: block;
+    margin-top: 200px;
+    margin-right: 50%;
+    width: 80px;
     height: auto;
 }
 
 #come-image {
-    display: block;
     position: absolute;
-    bottom: 75%; /* Position from the bottom */
-    margin-right: 70%;  /* Position from the right */
-    width: 150px; /* Adjust size as needed */
+    margin-top: 200px;
+    right: 70%;
+    width: 140px;
     height: auto;
-    /* Add additional styles here */
 }
 
 #eyes-image {
-    display: block;
     position: absolute;
-    top: 70%; /* Position from the top */
-    left: 50%; /* Position from the left */
-    width: 120px; /* Adjust size as needed */
-    height: auto;
-    /* Add additional styles here */
+    height: 60px;
+    top: 550px;
 }
+
+#typewriter-image {
+    display: block;
+    margin: 20px auto;
+    width: 80px;
+    height: auto;
+    margin-top: 170px;
+    margin-left: 60%;
+}
+
+
 
 #rose-image {
     display: block;
-    position: absolute;
-    bottom: 10%; /* Adjust position as needed */
-    right: 60%; /* Adjust position as needed */
-    width: 200px; /* Adjust size as needed */
+    margin: 20px auto;
+    width: 100px;
     height: auto;
-    /* Add additional styles here */
+    margin-top: 200px;
 }
 
 #generate-link {
@@ -230,6 +225,8 @@ ul {
     font-size: 20px;
     left: 140px;
 }
+
+
 
 @media (min-width: 320px) and (max-width: 370px) {
 
@@ -263,6 +260,11 @@ ul {
         position: absolute;
         margin-top: 100px;
         margin-left: -20px;
+    }
+
+    #rizz-image {
+        position: absolute;
+        margin-top: 400px;
     }
 }
 
@@ -318,6 +320,11 @@ ul {
         margin-top: 200px;
     }
 
+    #next-button, #second-next-button, #third-next-button {
+        position: absolute;
+        margin-left: 300px;
+    }
+
 }
 
 @media (min-width: 1024px) and (max-width: 1400px) {
@@ -362,6 +369,11 @@ ul {
     #pray-image {
         position: absolute;
         margin-top: 250px;
+    }
+
+    #next-button,#second-next-button, #third-next-button {
+        position: absolute;
+        margin-left: 300px;
     }
 
 }
@@ -409,6 +421,11 @@ ul {
     #pray-image {
         position: absolute;
         margin-top: 250px;
+    }
+
+    #next-button,#second-next-button, #third-next-button {
+        position: absolute;
+        margin-left: 300px;
     }
 
 
@@ -471,6 +488,11 @@ ul {
         font-size: 25px;
         left: 340px;
         margin-top: 290px;
+    }
+
+    #next-button,#second-next-button, #third-next-button {
+        position: absolute;
+        margin-left: 300px;
     }
 }
 

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Generated Link</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header id="main-header">
+      <h1>Your Generated Link</h1>
+    </header>
+    <div id="link-display">
+      <input type="text" id="unique-link" readonly />
+      <button id="copy-link">Copy Link</button>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const link = urlParams.get("link");
+        const uniqueLink = document.getElementById("unique-link");
+        const copyLinkButton = document.getElementById("copy-link");
+
+        if (link) {
+          uniqueLink.value = link;
+        }
+
+        copyLinkButton.addEventListener("click", () => {
+          uniqueLink.select();
+          document.execCommand("copy");
+          alert("Link copied to clipboard!");
+        });
+      });
+    </script>
+  </body>
+</html>

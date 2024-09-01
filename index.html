@@ -6,11 +6,10 @@
     <title>I have to tell you something...</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://use.typekit.net/bem0vxv.css" />
-
     <!-- Google tag (gtag.js) -->
     <script
       async
-      src="https://www.googletagmanager.com/gtag/js?id=G-CXBSZ42DEP"
+      src="https://www.googletagmanager.com/gtag/js?id=G-WXKJ594NN1"
     ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -18,94 +17,64 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
-      gtag("config", "G-CXBSZ42DEP");
+      gtag("config", "G-WXKJ594NN1");
     </script>
   </head>
   <body class="main-page">
-    <header id="main-header" class="header-visible">
+    <header id="main-header">
       <h1>I have to tell you something...</h1>
       <h4>by Vittorio Badia</h4>
     </header>
-
-    <div class="message-box" id="message-form">
-      <button id="write-button">Write Your Message</button>
+    <div id="initial-page" style="display: none">
+      <img id="secret-image" src="images/secret.png" alt="Secret Image" />
+      <img id="ear-image" src="images/ear.png" alt="Ear Image" />
+      <button id="next-button">Next</button>
     </div>
-
-    <div id="message-input" style="display: none">
+    <div id="second-page" style="display: none">
+      <h1>It is really important...</h1>
+      <img id="rizz-image" src="images/rizz.png" alt="Rizz Image" />
+      <img id="pray-image" src="images/pray.webp" alt="Pray Image" />
+      <button id="second-next-button">Next</button>
+    </div>
+    <div id="third-page" style="display: none">
+      <h1>Come closer</h1>
+      <img id="come-image" src="images/come.png" alt="Come Image" />
+      <img id="eyes-image" src="images/eyes.webp" alt="Eyes Image" />
+      <button id="third-next-button">Next</button>
+    </div>
+    <div id="message-form">
       <textarea
         id="message-text"
         placeholder="Write your message here..."
+        style="display: none"
       ></textarea>
-      <button id="continue-button">Continue</button>
+      <button id="write-button">Write your message</button>
+      <button id="continue-button" style="display: none">Continue</button>
     </div>
-
-    <div id="story-sequence" style="display: none">
-      <div id="story-page"></div>
-      <button id="next-button">Next</button>
-    </div>
-
     <div id="final-message" style="display: none">
       <div id="message-display"></div>
-      <button id="generate-link">Generate Link</button>
+      <div id="link-display" style="display: none">
+        <input type="text" id="unique-link" readonly />
+        <button id="copy-link">Copy Link</button>
+      </div>
     </div>
-
-    <div id="link-display" style="display: none">
-      <p>Share the message with who you want!:</p>
-      <input type="text" id="unique-link" readonly />
-      <button id="copy-link">Copy Link</button>
+    <div id="shared-final-page" style="display: none">
+      <div id="shared-message-display"></div>
+      <img
+        id="rose-image"
+        src="images/rose.png"
+        alt="Rose Image"
+        style="display: none"
+      />
+      <div id="generate-message-link" style="display: none"></div>
+      <!-- Added this line -->
     </div>
-
-    <!-- Images -->
     <img
       id="typewriter-image"
       src="images/typewriter.png"
       alt="Typewriter Image"
       style="display: none"
     />
-    <img
-      id="ear-image"
-      src="images/ear.png"
-      alt="Ear Image"
-      style="display: none"
-    />
-    <img
-      id="secret-image"
-      src="images/secret.png"
-      alt="Secret Image"
-      style="display: none"
-    />
-    <img
-      id="rizz-image"
-      src="images/rizz.png"
-      alt="Rizz Image"
-      style="display: none"
-    />
-    <img
-      id="pray-image"
-      src="images/pray.webp"
-      alt="Pray Image"
-      style="display: none"
-    />
-    <img
-      id="come-image"
-      src="images/come.png"
-      alt="Come Image"
-      style="display: none"
-    />
-    <img
-      id="eyes-image"
-      src="images/eyes.webp"
-      alt="Eyes Image"
-      style="display: none"
-    />
-    <img
-      id="rose-image"
-      src="images/rose.png"
-      alt="Rose Image"
-      style="display: none"
-    />
-
     <script src="script.js"></script>
   </body>
 </html>

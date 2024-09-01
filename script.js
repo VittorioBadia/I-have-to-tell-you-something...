@@ -1,90 +1,71 @@
+function encryptMessage(message) {
+    return btoa(encodeURIComponent(message));
+}
+
+function decryptMessage(encryptedMessage) {
+    return decodeURIComponent(atob(encryptedMessage));
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Declare all variables at the top
     const writeButton = document.getElementById('write-button');
-    const messageInput = document.getElementById('message-input');
     const messageText = document.getElementById('message-text');
     const continueButton = document.getElementById('continue-button');
-    const storySequence = document.getElementById('story-sequence');
-    const nextButton = document.getElementById('next-button');
     const finalMessage = document.getElementById('final-message');
     const messageDisplay = document.getElementById('message-display');
-    const generateLink = document.getElementById('generate-link');
     const linkDisplay = document.getElementById('link-display');
     const uniqueLink = document.getElementById('unique-link');
     const copyLinkButton = document.getElementById('copy-link');
-    const storyPage = document.getElementById('story-page');
     const mainHeader = document.getElementById('main-header');
-
-    const images = {
-        typewriter: document.getElementById('typewriter-image'),
-        ear: document.getElementById('ear-image'),
-        secret: document.getElementById('secret-image'),
-        rizz: document.getElementById('rizz-image'),
-        pray: document.getElementById('pray-image'),
-        come: document.getElementById('come-image'),
-        eyes: document.getElementById('eyes-image'),
-        rose: document.getElementById('rose-image')
-    };
+    const typewriterImage = document.getElementById('typewriter-image');
+    const initialPage = document.getElementById('initial-page');
+    const nextButton = document.getElementById('next-button');
+    const secondPage = document.getElementById('second-page');
+    const secondNextButton = document.getElementById('second-next-button');
+    const thirdPage = document.getElementById('third-page');
+    const thirdNextButton = document.getElementById('third-next-button');
+    const secretImage = document.getElementById('secret-image');
+    const earImage = document.getElementById('ear-image');
+    const rizzImage = document.getElementById('rizz-image');
+    const prayImage = document.getElementById('pray-image');
+    const comeImage = document.getElementById('come-image');
+    const eyesImage = document.getElementById('eyes-image');
+    const roseImage = document.getElementById('rose-image');
+    const generateMessageLink = document.getElementById('generate-message-link');
+    const sharedMessageDisplay = document.getElementById('shared-message-display');
+    const sharedFinalPage = document.getElementById('shared-final-page');
 
     let message = '';
-    let pageIndex = 0;
 
-    const pages = [
-        '"I have to tell you something..."',
-        '"It is really really important."',
-        '"Come closer..."',
-        '' // This will be replaced with the actual message
-    ];
-
-    // Create the generateOwnMessage link
-    const generateOwnMessage = document.createElement('a');
-    generateOwnMessage.textContent = "Generate your own message";
-    generateOwnMessage.href = window.location.origin + window.location.pathname;
-    generateOwnMessage.style.display = 'none';
-    generateOwnMessage.style.position = 'absolute';
-    generateOwnMessage.style.bottom = '50px';
-    generateOwnMessage.style.left = '50%';
-    generateOwnMessage.style.transform = 'translateX(-50%)';
-    generateOwnMessage.style.textDecoration = 'none';
-    generateOwnMessage.style.color = '#000';
-    document.body.appendChild(generateOwnMessage);
+    // Check if elements are found
+    if (!writeButton || !messageText || !continueButton || !finalMessage || !messageDisplay || !linkDisplay || !uniqueLink || !copyLinkButton || !mainHeader || !typewriterImage || !initialPage || !nextButton || !secondPage || !secondNextButton || !thirdPage || !thirdNextButton || !secretImage || !earImage || !rizzImage || !prayImage || !comeImage || !eyesImage || !roseImage || !generateMessageLink || !sharedMessageDisplay || !sharedFinalPage) {
+        console.error('One or more elements not found in the DOM');
+        return;
+    }
 
     writeButton.addEventListener('click', () => {
-        document.body.classList.remove('main-page');
-        document.getElementById('message-form').style.display = 'none';
-        messageInput.style.display = 'block';
-        images.typewriter.style.display = 'block';
+        mainHeader.style.display = 'none';
+        writeButton.style.display = 'none';
+        messageText.style.display = 'block';
+        continueButton.style.display = 'block';
+        typewriterImage.style.display = 'block';
     });
 
     continueButton.addEventListener('click', () => {
         message = messageText.value.trim();
         if (message) {
-            // Hide message input and typewriter image
-            messageInput.style.display = 'none';
-            images.typewriter.style.display = 'none';
-            
-            // Show final message section with generate link button
+            messageText.style.display = 'none';
+            continueButton.style.display = 'none';
+            typewriterImage.style.display = 'none';
             finalMessage.style.display = 'block';
-            document.getElementById('message-display').textContent = message;
-            
-            // Hide story sequence (it will only be shown for link recipients)
-            document.getElementById('story-sequence').style.display = 'none';
-        }
-    });
+            messageDisplay.textContent = message;
 
-    nextButton.addEventListener('click', () => {
-        if (pageIndex < pages.length - 1) {
-            pageIndex++;
-            showPage(pageIndex);
+            // Generate a link with the encrypted message as a parameter
+            const encryptedMessage = encryptMessage(message);
+            const link = `${window.location.origin}${window.location.pathname}?m=${encryptedMessage}`;
+            uniqueLink.value = link;
+            linkDisplay.style.display = 'block';
+            copyLinkButton.style.display = 'block';
         }
-    });
-
-    generateLink.addEventListener('click', () => {
-        const id = Math.random().toString(36).substr(2, 9);
-        localStorage.setItem(id, message);
-        const link = `${window.location.origin}${window.location.pathname}?id=${id}`;
-        uniqueLink.value = link;
-        linkDisplay.style.display = 'block';
     });
 
     copyLinkButton.addEventListener('click', () => {
@@ -93,70 +74,50 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('Link copied to clipboard!');
     });
 
-    function showPage(index) {
-        storyPage.innerText = index === pages.length - 1 ? `"${message}"` : pages[index];
-        storyPage.className = `page-${index + 1}`;
-
-        Object.values(images).forEach(img => img.style.display = 'none');
-
-        if (index === 0) {
-            images.ear.style.display = 'block';
-            images.secret.style.display = 'block';
-        } else if (index === 1) {
-            images.rizz.style.display = 'block';
-            images.pray.style.display = 'block';
-        } else if (index === 2) {
-            images.come.style.display = 'block';
-            images.eyes.style.display = 'block';
-        } else if (index === pages.length - 1) {
-            images.rose.style.display = 'block';
-            finalMessage.style.display = 'block';
-            storySequence.style.display = 'none';
-            messageDisplay.textContent = message;
-            // Show the "Generate your own message" link on the last page
-            generateOwnMessage.style.display = 'block';
-        }
-
-        nextButton.style.display = index < pages.length - 1 ? 'block' : 'none';
-    }
-
-    const authorName = document.querySelector('h4');
-    if (authorName) {
-        authorName.style.cursor = 'pointer';
-        authorName.addEventListener('click', () => {
-            window.location.href = 'info.html';
-        });
-    }
-
-    // Modify the logic for handling incoming links
+    // Check for incoming message in URL
     const urlParams = new URLSearchParams(window.location.search);
-    const incomingId = urlParams.get('id');
-    if (incomingId) {
-        message = localStorage.getItem(incomingId);
-        if (message) {
+    const incomingEncryptedMessage = urlParams.get('m');
+    if (incomingEncryptedMessage) {
+        try {
+            message = decryptMessage(incomingEncryptedMessage);
             document.getElementById('message-form').style.display = 'none';
-            document.getElementById('story-sequence').style.display = 'block';
-            generateLink.style.display = 'none';
-            if (mainHeader) {
-                mainHeader.style.display = 'none';
-            }
-            pageIndex = 0;
-            showPage(pageIndex);
-        } else {
-            // Handle case where message is not found
-            finalMessage.style.display = 'block';
-            messageDisplay.textContent = 'Message not found.';
-            generateOwnMessage.style.display = 'block';
-            if (mainHeader) {
-                mainHeader.style.display = 'none';
-            }
+            initialPage.style.display = 'block';
+            mainHeader.style.display = 'block';
+        } catch (error) {
+            console.error('Error decrypting message:', error);
+            // Handle error (e.g., display an error message to the user)
         }
-    } else {
-        // This is the main page, hide the "Generate your own message" link
-        generateOwnMessage.style.display = 'none';
     }
 
-    // ... rest of the code ...
+    nextButton.addEventListener('click', () => {
+        initialPage.style.display = 'none';
+        mainHeader.style.display = 'none';
+        secondPage.style.display = 'block';
+    });
+
+    secondNextButton.addEventListener('click', () => {
+        secondPage.style.display = 'none';
+        thirdPage.style.display = 'block';
+    });
+
+    thirdNextButton.addEventListener('click', () => {
+        thirdPage.style.display = 'none';
+        finalMessage.style.display = 'block';
+        messageDisplay.textContent = message;
+        typewriterImage.style.display = 'none';
+        
+        // Add the rose image and generate message link
+        roseImage.style.display = "block";
+        finalMessage.appendChild(roseImage);
+
+        const generateMessageText = document.createElement('p');
+        generateMessageText.innerHTML = 'Generate your own message to share with your friends <a href="/">here</a>.';
+        finalMessage.appendChild(generateMessageText);
+    });
+
+    generateMessageLink.addEventListener('click', () => {
+        window.location.href = '/';
+    });
 });
 
 
