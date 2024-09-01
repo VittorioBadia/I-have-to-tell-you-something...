@@ -94,8 +94,6 @@ h4 {
     font-size: 13px;
 }
 
-
-
 .page-1 {
     position: absolute;
     margin-top: 45%; /* Example position */
@@ -218,4 +216,149 @@ h4 {
 #new-message-link {
     position: absolute;
     top: 370px;
+}
+
+
+
+/* Mobile L (425px - 430px) */
+@media (min-width: 425px) and (max-width: 430px) {
+    h1 {
+        font-size: 24px; /* Adjust this value as needed */
+    }
+}
+
+/* Tablet (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    h1, #write-button, h4, #continue-button, #generate-link {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    h1 {
+        top: 100px;
+    }
+
+    #write-button {
+        top: 250px;
+    }
+
+    h4 {
+        top: 550px;
+    }
+
+    #continue-button {
+        top: 300px;
+    }
+
+    #generate-link {
+        top: 350px;
+    }
+
+    #typewriter-image {
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 400px;
+    }
+}
+
+/* Laptop (1024px - 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+    h1, #write-button, h4, #continue-button, #generate-link {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    h1 {
+        top: 120px;
+    }
+
+    #write-button {
+        top: 280px;
+    }
+
+    h4 {
+        top: 580px;
+    }
+
+    #continue-button {
+        top: 330px;
+    }
+
+    #generate-link {
+        top: 380px;
+    }
+
+    #typewriter-image {
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 450px;
+    }
+}
+
+/* Laptop L (1440px - 1679px) */
+@media (min-width: 1440px) and (max-width: 1679px) {
+    h1, #write-button, h4, #continue-button, #generate-link {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    h1 {
+        top: 140px;
+    }
+
+    #write-button {
+        top: 310px;
+    }
+
+    h4 {
+        top: 610px;
+    }
+
+    #continue-button {
+        top: 360px;
+    }
+
+    #generate-link {
+        top: 410px;
+    }
+
+    #typewriter-image {
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 500px;
+    }
+}
+
+/* MacBook (1680px and above) */
+@media (min-width: 1680px) {
+    h1, #write-button, h4, #continue-button, #generate-link {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    h1 {
+        top: 160px;
+    }
+
+    #write-button {
+        top: 340px;
+    }
+
+    h4 {
+        top: 640px;
+    }
+
+    #continue-button {
+        top: 390px;
+    }
+
+    #generate-link {
+        top: 440px;
+    }
+
+    #typewriter-image {
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 550px;
+    }
 }

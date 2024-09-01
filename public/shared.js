@@ -27,10 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     function showPage(index) {
-        if (index > 0) {
-            mainTitle.style.display = 'none';
+        if (index === 0) {
+            storyPage.innerText = pages[index];
+            storyPage.className = 'page-1 first-message';  // Add 'first-message' class
         } else {
-            mainTitle.style.display = 'block';
+            mainTitle.style.display = 'none';
         }
 
         storyPage.innerText = index === pages.length - 1 ? `"${message}"` : pages[index];

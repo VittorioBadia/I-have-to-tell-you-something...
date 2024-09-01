@@ -225,3 +225,254 @@ ul {
     position: absolute;
     top: 200px;
 }
+
+#story-page.page-1 {
+    font-size: 20px;
+    left: 140px;
+}
+
+@media (min-width: 320px) and (max-width: 370px) {
+
+    #write-button {
+        position: absolute;
+        margin-right: 50px;
+        margin-left: -40px;
+    }
+
+    h4 {
+        position: absolute;
+        margin-right: 50px;
+        margin-left: -40px;
+        margin-top: -40px;
+    }
+
+    #continue-button {
+        position: absolute;
+        margin-right: 50px;
+        margin-left: -40px;
+        margin-top: -40px;
+    }
+
+    #generate-link {
+        position: absolute;
+        margin-top: 100px;
+        margin-left: -40px;
+    }
+
+    #copy-link {
+        position: absolute;
+        margin-top: 100px;
+        margin-left: -20px;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 420px) {
+    
+    h4 {
+        position: absolute;
+        margin-top: -60px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1020px) {
+    h1 {
+        position: absolute;
+        margin-left: 150px;
+    }
+
+    #write-button {
+        position: absolute;
+        margin-left: 170px;
+    }
+
+    h4 {
+        position: absolute;
+        margin-top: -90px;
+        margin-left: 180px;
+    }
+
+    #continue-button {
+        position: absolute;
+        margin-left: 180px;
+    }
+
+    #typewriter-image {
+        position: absolute;
+        margin-left: 240px;
+        margin-top: 290px;
+    }
+
+    #generate-link {
+        position: absolute;
+        margin-left: 180px;
+    }
+
+    #story-page.page-1 {
+        font-size: 20px;
+        left: 440px;
+    }
+
+    #story-page.page-2 {
+        font-size: 20px;
+        left: 340px;
+        margin-top: 200px;
+    }
+
+}
+
+@media (min-width: 1024px) and (max-width: 1400px) {
+    h1 {
+        position: absolute;
+        margin-left: 300px;
+    }
+
+    #write-button {
+        position: absolute;
+        margin-left: 330px;
+    }
+
+    h4 {
+        position: absolute;
+        margin-top: -90px;
+        margin-left: 330px;
+    }
+
+    #typewriter-image {
+        position: absolute;
+        margin-left: 240px;
+        margin-top: 290px;
+    }
+
+    #generate-link {
+        position: absolute;
+        margin-left: 330px;
+    }
+
+    #story-page.page-1 {
+        font-size: 20px;
+        left: 640px;
+    }
+
+    #story-page.page-2 {
+        font-size: 20px;
+        left: 340px;
+        margin-top: 250px;
+    }
+
+    #pray-image {
+        position: absolute;
+        margin-top: 250px;
+    }
+
+}
+
+@media (min-width: 1440px) and (max-width: 1600px) {
+    h1 {
+        position: absolute;
+        margin-left: 450px;
+    }
+
+    #write-button {
+        position: absolute;
+        margin-left: 480px;
+    }
+
+    h4 {
+        position: absolute;
+        margin-top: -90px;
+        margin-left: 480px;
+    }
+
+    #continue-button {
+        position: absolute;
+        margin-left: 480px;
+    }
+
+    #typewriter-image {
+        position: absolute;
+        margin-left: 240px;
+        margin-top: 290px;
+    }
+
+    #story-page.page-1 {
+        font-size: 20px;
+        left: 740px;
+        margin-top: 300px;
+    }
+
+    #story-page.page-2 {
+        font-size: 20px;
+        left: 340px;
+        margin-top: 290px;
+    }
+
+    #pray-image {
+        position: absolute;
+        margin-top: 250px;
+    }
+
+
+}
+
+@media (min-width: 1680px) {
+    h1 {
+        position: absolute;
+        margin-left: 630px;
+    }
+
+    #write-button {
+        position: absolute;
+        margin-left: 650px;
+    }
+
+    h4 {
+        position: absolute;
+        margin-top: -90px;
+        margin-left: 650px;
+    }
+
+    #continue-button {
+        position: absolute;
+        margin-left: 650px;
+    }
+
+    #typewriter-image {
+        position: absolute;
+        margin-left: 240px;
+        margin-top: 290px;
+    }
+
+    #generate-link {
+        position: absolute;
+        margin-left: 650px;
+    }
+
+    #story-page.page-1 {
+        font-size: 20px;
+        left: 740px;
+        margin-top: 300px;
+    }
+
+    #ear-image {
+        display: block;
+        margin-top: 40px;
+        margin-left: 10%;
+        width: 80px;
+        height: auto;
+    }
+
+    #pray-image {
+        position: absolute;
+        margin-top: 250px;
+        margin-left: 10%;
+    }
+
+    #story-page.page-2 {
+        font-size: 25px;
+        left: 340px;
+        margin-top: 290px;
+    }
+}
+
+
+
