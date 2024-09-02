@@ -23,7 +23,11 @@
   <body class="main-page">
     <header id="main-header">
       <h1>I have to tell you something...</h1>
-      <h4>by Vittorio Badia</h4>
+      <h4>
+        by Vittorio Badia
+        <img id="home-icon" src="images/casa.png" alt="Home Icon" />
+      </h4>
+      <h3>Version 1.1</h3>
     </header>
     <div id="initial-page" style="display: none">
       <img id="secret-image" src="images/secret.png" alt="Secret Image" />
@@ -48,6 +52,12 @@
         placeholder="Write your message here..."
         style="display: none"
       ></textarea>
+      <img
+        id="home-icon-message"
+        src="images/casa.png"
+        alt="Home Icon"
+        style="display: none"
+      />
       <button id="write-button">Write your message</button>
       <button id="continue-button" style="display: none">Continue</button>
     </div>
@@ -56,6 +66,12 @@
       <div id="link-display" style="display: none">
         <input type="text" id="unique-link" readonly />
         <button id="copy-link">Copy Link</button>
+        <img
+          id="home-icon-link"
+          src="images/casa.png"
+          alt="Home Icon"
+          style="display: none"
+        />
       </div>
     </div>
     <div id="shared-final-page" style="display: none">

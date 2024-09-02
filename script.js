@@ -33,14 +33,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const generateMessageLink = document.getElementById('generate-message-link');
     const sharedMessageDisplay = document.getElementById('shared-message-display');
     const sharedFinalPage = document.getElementById('shared-final-page');
+    const homeIcon = document.getElementById('home-icon');
+    const homeIconMessage = document.getElementById('home-icon-message');
+    const homeIconLink = document.getElementById('home-icon-link');
 
     let message = '';
 
-    // Check if elements are found
-    if (!writeButton || !messageText || !continueButton || !finalMessage || !messageDisplay || !linkDisplay || !uniqueLink || !copyLinkButton || !mainHeader || !typewriterImage || !initialPage || !nextButton || !secondPage || !secondNextButton || !thirdPage || !thirdNextButton || !secretImage || !earImage || !rizzImage || !prayImage || !comeImage || !eyesImage || !roseImage || !generateMessageLink || !sharedMessageDisplay || !sharedFinalPage) {
+    homeIcon.style.display = 'block';
+
+    if (!writeButton || !messageText || !continueButton || !finalMessage || !messageDisplay || !linkDisplay || !uniqueLink || !copyLinkButton || !mainHeader || !typewriterImage || !initialPage || !nextButton || !secondPage || !secondNextButton || !thirdPage || !thirdNextButton || !secretImage || !earImage || !rizzImage || !prayImage || !comeImage || !eyesImage || !roseImage || !generateMessageLink || !sharedMessageDisplay || !sharedFinalPage || !homeIcon || !homeIconMessage || !homeIconLink) {
         console.error('One or more elements not found in the DOM');
         return;
     }
+
+    homeIcon.addEventListener('click', () => {
+        window.location.href = '/';
+    });
+
+    homeIconMessage.addEventListener('click', () => {
+        window.location.href = '/';
+    });
+
+    homeIconLink.addEventListener('click', () => {
+        window.location.href = '/';
+    });
 
     writeButton.addEventListener('click', () => {
         mainHeader.style.display = 'none';
@@ -48,6 +64,8 @@ document.addEventListener('DOMContentLoaded', () => {
         messageText.style.display = 'block';
         continueButton.style.display = 'block';
         typewriterImage.style.display = 'block';
+        homeIcon.style.display = 'block';
+        homeIconMessage.style.display = 'block';
     });
 
     continueButton.addEventListener('click', () => {
@@ -58,13 +76,15 @@ document.addEventListener('DOMContentLoaded', () => {
             typewriterImage.style.display = 'none';
             finalMessage.style.display = 'block';
             messageDisplay.textContent = message;
+            homeIconMessage.style.display = 'none';
 
-            // Generate a link with the encrypted message as a parameter
             const encryptedMessage = encryptMessage(message);
             const link = `${window.location.origin}${window.location.pathname}?m=${encryptedMessage}`;
             uniqueLink.value = link;
             linkDisplay.style.display = 'block';
             copyLinkButton.style.display = 'block';
+            homeIcon.style.display = 'block';
+            homeIconLink.style.display = 'block';
         }
     });
 
@@ -72,9 +92,10 @@ document.addEventListener('DOMContentLoaded', () => {
         uniqueLink.select();
         document.execCommand('copy');
         alert('Link copied to clipboard!');
+        homeIcon.style.display = 'block';
+        homeIconLink.style.display = 'block';
     });
 
-    // Check for incoming message in URL
     const urlParams = new URLSearchParams(window.location.search);
     const incomingEncryptedMessage = urlParams.get('m');
     if (incomingEncryptedMessage) {
@@ -83,21 +104,24 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('message-form').style.display = 'none';
             initialPage.style.display = 'block';
             mainHeader.style.display = 'block';
+            homeIcon.style.display = 'block';
         } catch (error) {
             console.error('Error decrypting message:', error);
-            // Handle error (e.g., display an error message to the user)
         }
     }
 
     nextButton.addEventListener('click', () => {
         initialPage.style.display = 'none';
-        mainHeader.style.display = 'none';
         secondPage.style.display = 'block';
+        mainHeader.style.display = 'none';
+        homeIcon.style.display = 'block';
     });
 
     secondNextButton.addEventListener('click', () => {
         secondPage.style.display = 'none';
         thirdPage.style.display = 'block';
+        mainHeader.style.display = 'none';
+        homeIcon.style.display = 'block';
     });
 
     thirdNextButton.addEventListener('click', () => {
@@ -105,18 +129,18 @@ document.addEventListener('DOMContentLoaded', () => {
         finalMessage.style.display = 'block';
         messageDisplay.textContent = message;
         typewriterImage.style.display = 'none';
-        
-        // Add the rose image and generate message link
         roseImage.style.display = "block";
         finalMessage.appendChild(roseImage);
 
         const generateMessageText = document.createElement('p');
         generateMessageText.innerHTML = 'Generate your own message to share with your friends <a href="/">here</a>.';
         finalMessage.appendChild(generateMessageText);
+        homeIcon.style.display = 'block';
     });
 
     generateMessageLink.addEventListener('click', () => {
         window.location.href = '/';
+        homeIcon.style.display = 'block';
     });
 });
 

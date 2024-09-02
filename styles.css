@@ -72,6 +72,7 @@ button:hover {
 #link-display {
     position: absolute;
     top: 35px;
+    left: 120px;
 }
 
 #story-page {
@@ -208,6 +209,7 @@ h4 {
 #copy-link {
     position: absolute;
     top: 420px;
+    left: -5%;
 }
 
 .title {
@@ -371,7 +373,7 @@ ul {
         margin-top: 250px;
     }
 
-    #next-button,#second-next-button, #third-next-button {
+    #next-button, #second-next-button, #third-next-button {
         position: absolute;
         margin-left: 300px;
     }
@@ -423,7 +425,7 @@ ul {
         margin-top: 250px;
     }
 
-    #next-button,#second-next-button, #third-next-button {
+    #next-button, #second-next-button, #third-next-button {
         position: absolute;
         margin-left: 300px;
     }
@@ -490,7 +492,7 @@ ul {
         margin-top: 290px;
     }
 
-    #next-button,#second-next-button, #third-next-button {
+    #next-button, #second-next-button, #third-next-button {
         position: absolute;
         margin-left: 300px;
     }
@@ -498,3 +500,19 @@ ul {
 
 
 
+
+#home-icon, #home-icon-message, #home-icon-link {
+    display: block;
+    position: fixed; /* Fix the position */
+    top: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    z-index: 1000; /* Ensure it is on top of other elements */
+    height: 20px;
+}
+
+h3 {
+    position: absolute;
+    font-size: 10px;
+    top: 570px;
+    left: 160px;
+}
